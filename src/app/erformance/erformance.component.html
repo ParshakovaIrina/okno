@@ -1,0 +1,12 @@
+<div class="poster">
+  <div (click)="changeContent(1)"><img class="poster-image" src="../../assets/1zpsKGpy7nM.jpg"></div>
+  <div (click)="changeContent(2)"><img class="poster-image" src="../../assets/77FUuKL-7cA.jpg"></div>
+  <div (click)="changeContent(3)"><img class="poster-image" src="../../assets/MGU3rg4oHnU.jpg"></div>
+</div>
+
+
+<div [ngSwitch]="numberContent">
+  <div *ngSwitchCase="1"><app-legends></app-legends></div>
+  <div *ngSwitchCase="2"><app-exit></app-exit></div>
+  <div *ngSwitchCase="3"><app-trap></app-trap></div>
+</div>

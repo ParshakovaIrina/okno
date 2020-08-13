@@ -1,0 +1,18 @@
+<div class="menu">
+  <p class="menu-text" (click)="changeContent(1)">Главное</p>
+  <p class="menu-text" (click)="changeContent(2)">О нас</p>
+  <p class="menu-text" (click)="changeContent(3)">Мероприятия</p>
+  <p class="menu-text" (click)="changeContent(4)">Спектакли</p>
+  <p class="menu-text" (click)="changeContent(5)">Отзывы</p>
+  <p class="menu-text" (click)="changeContent(6)">Контакты</p>
+</div>
+<div [ngSwitch]="numberContent">
+  <div *ngSwitchCase="1"><app-main-page></app-main-page></div>
+  <div *ngSwitchCase="2"><app-about></app-about></div>
+  <div *ngSwitchCase="3"><app-activity></app-activity></div>
+  <div *ngSwitchCase="4"><app-erformance></app-erformance></div>
+  <div *ngSwitchCase="5"><app-reviews></app-reviews></div>
+  <div *ngSwitchCase="6"><app-contacts></app-contacts></div>
+</div>
+
+
