@@ -68,12 +68,9 @@
   <div class="about-line"></div>
 </div>
 <div class="wafest">
-  <img class="wafest-img" src="../../assets/wafest/9YRoDMdFePo.jpg"/>
-  <img class="wafest-img" src="../../assets/wafest/eDnM6RTn-9s.jpg"/>
-  <img class="wafest-img" src="../../assets/wafest/VxevkAxmjok.jpg"/>
-  <img class="wafest-img" src="../../assets/wafest/oNQwgzXV8DA.jpg"/>
-  <img class="wafest-img" src="../../assets/wafest/MmYgb87o9OU.jpg"/>
-  <img class="wafest-img" src="../../assets/wafest/i5LGlEyHtug.jpg"/>
+  <div *ngFor="let slide of slides"  (click)="showGallery()">
+  <img class="wafest-img" src="{{slide.image}}"/>
+  </div>
 </div>
 <div class="about">
   <div class="about-line"></div>
@@ -86,4 +83,12 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="casting-img"><img class="casting-img-photo" src="../../assets/DSC00016.jpg"/></div>
+</div>
+
+<div *ngIf="gallery" class="back">
+  <button class="bottt" (click)="showGallery()">
+    <img class="butt-img" src="../../assets/symbols/1487086345-cross_81577.svg"></button>
+  <div class="gallery">
+    <app-calusel [slides]="slides" [counter]="slides[2].id"></app-calusel>
+  </div>
 </div>

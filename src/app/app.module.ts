@@ -15,6 +15,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ActivityComponent } from './activity/activity.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { CaluselComponent } from './calusel/calusel.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,13 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MainPageComponent,
     ActivityComponent,
     ContactsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CaluselComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

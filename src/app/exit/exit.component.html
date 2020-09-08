@@ -51,25 +51,24 @@
 </div>
 <div class="galery">
   <div class="party">
-    <img class="party-img" src="../../assets/exit/3aXZkPShhT4.jpg"/>
-    <img class="party-img" src="../../assets/exit/yKhAZ-TYQBk.jpg"/>
-    <img class="party-img" src="../../assets/exit/v94lLAEVPN0.jpg"/>
-    <img class="party-img" src="../../assets/exit/V1rDmiDkSoI.jpg"/>
-    <img class="party-img" src="../../assets/exit/RBTMG2TA1Q4.jpg"/>
-    <img class="party-img" src="../../assets/exit/lrEZnt-QzDM.jpg"/>
-    <img class="party-img" src="../../assets/exit/J1-NUljv2nU.jpg"/>
-    <img class="party-img" src="../../assets/exit/hM78UHjTdHs.jpg"/></div>
+    <!--       [class.selected]="slide === selectedSlide" (mouseenter)="onSelect(slide)"-->
+    <div *ngFor="let slide of slides| slice:0:8" (click)="showGallery()">
+      <img class="party-img" src="{{slide.image}}"/>
+    </div>
+  </div>
 </div>
 <div *ngIf="more" (click)="MoreImg()" class="more-text"> показать еще</div>
 <div *ngIf="!more" class="galery">
   <div class="party">
-    <img class="party-img" src="../../assets/exit/hHqjoNAVqQ8.jpg"/>
-    <img class="party-img" src="../../assets/exit/Gu_e0l_eZ_g.jpg"/>
-    <img class="party-img" src="../../assets/exit/GBBDJQG3T18.jpg"/>
-    <img class="party-img" src="../../assets/exit/DLDmglWpm-0.jpg"/>
-    <img class="party-img" src="../../assets/exit/bp1hp-nrZ7U.jpg"/>
-    <img class="party-img" src="../../assets/exit/_nAq2DIwgzg.jpg"/>
-    <img class="party-img" src="../../assets/exit/-fnN0beCR40.jpg"/>
-    <img class="party-img" src="../../assets/exit/5-fbatDOWaQ.jpg"/>
+    <div *ngFor="let slide of slides| slice:9" (click)="showGallery()">
+      <img class="party-img" src="{{slide.image}}"/>
+    </div>
+  </div>
+</div>
+<div *ngIf="gallery" class="back">
+  <button class="bottt" (click)="showGallery()">
+    <img class="butt-img" src="../../assets/symbols/1487086345-cross_81577.svg"></button>
+  <div class="gallery">
+    <app-calusel [slides]="slides" [counter]="slides[2].id"></app-calusel>
   </div>
 </div>

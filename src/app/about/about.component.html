@@ -5,8 +5,8 @@
 <div class="choreogaphs">
   <div (click)="openMore()"><img class="choreogaphs-img" src="../../assets/ choreographer/458A6319.jpg"/></div>
   <div><img class="choreogaphs-img" src="../../assets/ choreographer/458A5937.jpg"/></div>
-  <div><img class="choreogaphs-img" src="../../assets/ choreographer/458A6228.jpg"/></div>
-  <div><img class="choreogaphs-img" src="../../assets/ choreographer/458A6280.jpg"/></div>
+<!--  <div><img class="choreogaphs-img" src="../../assets/ choreographer/458A6228.jpg"/></div>-->
+<!--  <div><img class="choreogaphs-img" src="../../assets/ choreographer/458A6280.jpg"/></div>-->
 </div>
 
 <div class="about">
@@ -20,18 +20,18 @@
   <img class="party-img" src="../../assets/party/458A0600.jpg"/>
   <img class="party-img" src="../../assets/party/458A0606.jpg"/>
   <img class="party-img" src="../../assets/party/458A0560 (1).jpg"/>
-  <img class="party-img" src="../../assets/party/458A5992.jpg"/>
-  <img class="party-img" src="../../assets/party/458A5972.jpg"/>
+<!--  <img class="party-img" src="../../assets/party/458A5992.jpg"/>-->
+<!--  <img class="party-img" src="../../assets/party/458A5972.jpg"/>-->
   <img class="party-img" src="../../assets/party/458A6215.jpg"/>
   <img class="party-img" src="../../assets/party/458A6185.jpg"/>
-  <img class="party-img" src="../../assets/party/458A6149.jpg"/>
-  <img class="party-img" src="../../assets/party/458A6116.jpg"/>
-  <img class="party-img" src="../../assets/party/458A6070.jpg"/>
-  <img class="party-img" src="../../assets/party/458A6048.jpg"/>
+<!--  <img class="party-img" src="../../assets/party/458A6149.jpg"/>-->
+<!--  <img class="party-img" src="../../assets/party/458A6116.jpg"/>-->
+<!--  <img class="party-img" src="../../assets/party/458A6070.jpg"/>-->
+<!--  <img class="party-img" src="../../assets/party/458A6048.jpg"/>-->
 </div>
 
-<div class="more" *ngIf="description">
+<div  *ngIf="description" class="back">
   <button class="bottt" (click)="openMore()">
     <img class="butt-img" src="../../assets/symbols/1487086345-cross_81577.svg"></button>
-  <app-about-more></app-about-more>
+  <div class="more"><app-about-more></app-about-more></div>
 </div>

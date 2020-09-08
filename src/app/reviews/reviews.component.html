@@ -1,5 +1,17 @@
-<div>
+<!--<div>-->
 
-  <img src="../../assets/ reviews/Снимок6.PNG" height="224" width="432"/>
-  <img src="../../assets/ reviews/Снимок5.PNG" height="123" width="479"/>
+<!--  <img src="../../assets/ reviews/Снимок6.PNG" height="224" width="432"/>-->
+<!--  <img src="../../assets/ reviews/Снимок5.PNG" height="123" width="479"/>-->
+<!--</div>-->
+
+<!--<div *ngFor="let messages of slides" >-->
+<!--  {{messages.id}}:{{messages.caption}}-->
+<!--</div>-->
+<div class="gallery">
+<app-calusel [slides]="slides" [counter]="slides[2].id"></app-calusel>
+</div>
+<div class="all">
+  <div *ngFor="let slide of slides" >
+    <img class="all-img" src="{{slide.image}}"/>
+  </div>
 </div>
